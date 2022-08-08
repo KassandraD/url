@@ -16,8 +16,8 @@ class Urls extends Migration
         //
         Schema::create('direccion', function(Blueprint $table){
             $table->increments('id');
-            $table->string('url', 150);
-            $table->string('short_url', 20)->unique();
+            $table->string('url', 150)->unique();
+            $table->string('short_url', 6)->unique();
             $table->timestamps();
             $table->integer('estado');
 

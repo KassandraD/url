@@ -12,7 +12,8 @@ class controllerUrl extends Controller
 {
 
 	public function index (){
-		$urls = Direccion::all();
+		// $urls = Direccion::orderBy('id','desc')->simplePaginate(5);
+        $urls = Direccion::simplePaginate(5);        
 		return view('index',compact('urls'));
 	}
 

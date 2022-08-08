@@ -12,19 +12,41 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_inicio()
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertStatus(200)
+            ->assertSee('Ingresa url:')
+        ;
+
     }
 
-    public function test_url()
+    public function test_inicio_sin_datos()
     {
-        $this->get('/usuarioswref')
-        ->assertStatus(200)
-        ->assertSee('Ruta: usuarioswref');
+        $response = $this->get('/');
+
+        $response->assertStatus(200)
+            ->assertSee("No se han generado urls");
+
     }
+
+
+    public function test_url_no_existe()
+    {
+        $this->get('/12345678')
+        ->assertStatus(404)
+        ->assertSee('Sitio no encontrado');
+    }
+
+    public function test_url_redirecciona()
+    {
+        $this->get('/ldf72z')
+        ->assertStatus(200)
+        ->assertSee('Redireccionando');
+    }
+
+
 
 
     // validar que el url es requerido

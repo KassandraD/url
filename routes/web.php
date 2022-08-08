@@ -15,10 +15,7 @@ use App\Http\Controllers\controllerUrl;
 */
 
 Route::get('/', 'App\Http\Controllers\controllerUrl@index')->name('index.route');
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/{url}', 'App\Http\Controllers\controllerUrl@short');
+Route::get('/{url}', 'App\Http\Controllers\controllerUrl@short')->name('redirecciona.route');
 
 Route::post('/generarUrl', 'App\Http\Controllers\controllerUrl@generar')->name('generar.route');

@@ -21,10 +21,7 @@
             }
         </style>
     </head>
-    <body class="antialiased">
-       
-
-       <!--  <a href="{{route('index.route')}}"> Inicio</a> -->
+    <body class="antialiased">       
         <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh;">
             <div class="card border-danger mb-3" style="max-width: 50%;">
                 <div class="card-header">Error 404 || Sitio no encontrado</div>

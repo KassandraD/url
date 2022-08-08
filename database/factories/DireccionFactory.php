@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-// use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 class DireccionFactory extends Factory
